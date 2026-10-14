@@ -4,6 +4,9 @@
   --electric-orange: #fe6e06;
   --dark-grey: #333333;
   --white: #ffffff;
+
+  --font-serif: "Times New Roman", Times, serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1,
@@ -18,7 +21,7 @@ p {
 }
 
 /*
-* {
+•⁠  ⁠{
   border:: 1px solid black;
 }
 */
@@ -30,30 +33,24 @@ body {
 
 .hero {
   background: linear-gradient(180deg, #fcb782 85%, #fff 85%, #fff 100%);
-  padding: 67px; /* inner margin*/
+  padding: 67px; /* inner margin */
 }
 .container {
-  display: flex; /* all childrens will apear horizontally */
+  display: flex; /* all childrens will appear horizontally */
   max-width: 1312px;
-  margin: auto; /* will center my tag*/
+  margin: 0 auto; /* will center my tag */
 }
 .column {
   width: 50%;
-  position: relative; /* to be the reference of a absolute children*/
+  position: relative; /* to be reference of the absolute children */
 }
 .heading-wrapper {
   padding-top: 70px;
   display: flex;
-  align-items: center; /* align vertically to the center*/
+  align-items: center; /* align vertically to the center */
 }
 .text {
-  padding: 40px 0; /* when 2 values here: first = top/bottom, last: right/left*/
-}
-
-/* These are comments */
-/* tag styles are like `h1`and class styles are like `.title`*/
-.container {
-  display: flex; /* all childrens will apear horizontally */
+  padding: 40px 0; /* when 2 values here: first= top/bottom, last: right/left */
 }
 
 .badge svg .text-badge {
@@ -61,12 +58,13 @@ body {
   animation: rotate 5s linear infinite;
   animation-play-state: paused;
 }
+
 .badge svg:hover .text-badge {
   animation-play-state: running;
 }
 
-/* These are comments */
-/* tag styles are like `h1`and class styles are like `.title`*/
+/* These are coments */
+/* tag styles are like 'h1' and styles are like 'title' */
 
 h1 {
   font-size: 112px;
@@ -78,8 +76,9 @@ h1 {
   text-transform: none;
   color: var(--white);
 }
+
 .text p {
-  /* compund style: paragraf inside a tag with class text*/
+  /* compund style: paragraph inside a tag with class 'text' */
   font-size: 24px;
   font-family: Helvetica Neue;
   font-weight: 400;
@@ -89,6 +88,7 @@ h1 {
   color: var(--white);
   padding-bottom: 30px;
 }
+
 .text a {
   background-color: var(--electric-orange);
   color: var(--white);
@@ -102,24 +102,32 @@ h1 {
   transform: translateY(-5px);
 }
 
-/* CARDS STYLES*/
+/* card styles */
+
 .cards-wrapper {
   padding: 20px 0;
   display: flex;
   gap: 16px;
 }
+
+.card-title i {
+  font-size: 18px;
+  color: var(--orange);
+}
+
 .card-title {
   display: flex;
   align-items: center;
   gap: 9px;
   margin-bottom: 8px;
 }
+
 .card {
   background-color: var(--light-orange);
   border-radius: 24px;
   padding: 20px;
-  gap: 8px;
 }
+
 p {
   font-family: "Helvetica Neue";
   font-size: 16px;
@@ -127,36 +135,35 @@ p {
   font-weight: 300;
   line-height: normal;
 }
-.card-title i {
-  font-size: 18px;
-  color: var(--orange);
-}
 
 .normal {
   font-size: 16px;
-  font-family: Helvetica Neue;
+  font-family: "Helvetica Neue";
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
   text-transform: none;
 }
+
 .card-title h2 {
   font-size: 20px;
-  font-family: Helvetica Neue;
+  font-family: "Helvetica Neue";
   font-weight: 500;
   font-style: normal;
   text-decoration: none;
   text-transform: none;
 }
+
 .btn-text {
   font-size: 20px;
-  font-family: Helvetica Neue;
+  font-family: "Helvetica Neue";
   font-weight: 500;
   font-style: normal;
   line-height: 18px;
   text-decoration: none;
   text-transform: none;
 }
+
 .shape {
   position: absolute;
   right: 0;
@@ -175,7 +182,7 @@ p {
   z-index: 1;
 }
 
-/* ANIMATIONS HERE*/
+/* ANIMATIONS HERE */
 
 @keyframes rotate {
   from {
@@ -183,5 +190,281 @@ p {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* MY WORKS */
+.my-works {
+  background: linear-gradient(180deg, #fff 87%, #fcb782 85%, #fcb782 100%);
+  padding: 67px;
+}
+
+.my-works .container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.works-title {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 49px;
+}
+
+.works-title h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(48px, 6vw, 112px);
+  font-weight: 400;
+  line-height: 1;
+  color: #fcb782;
+}
+
+/* CARDS */
+.cards-works {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.card.vertical {
+  flex: 0 1 246px;
+  min-width: 0;
+  height: 650px;
+  padding: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  background: #8f857d;
+}
+
+/* CARD IMAGE */
+.card.vertical img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.37;
+}
+/* CARD YEAR */
+.card-year {
+  position: absolute;
+  top: 20px;
+  left: 18px;
+  z-index: 2;
+  font-size: 13px;
+  color: #000;
+}
+/* CARD DISCIPLINE */
+.card-category {
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  z-index: 2;
+  max-width: 110px;
+  font-size: 13px;
+  text-align: right;
+  letter-spacing: 1px;
+  color: #000;
+}
+/* CARD TITLE */
+.card-title1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  z-index: 2;
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 38px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #000;
+}
+
+.explore-btn {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-size: 16px;
+  white-space: nowrap;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.explore-btn:hover {
+  color: var(--white);
+}
+
+.view-more {
+  margin-top: 85px;
+}
+
+.btn-text a {
+  font-size: 20px;
+  font-family: "Helvetica Neue";
+  font-weight: 500;
+  font-style: normal;
+  line-height: 18px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* FOOTER */
+.footer {
+  padding: 67px;
+  background: linear-gradient(180deg, var(--orange) 0%, var(--white) 100%);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  width: 1196px;
+  max-width: 100%;
+  min-height: 555px;
+  padding: 47px 56px 38px 47px;
+  border-radius: 24px;
+  border: 4px solid var(--orange);
+  background: var(--light-orange);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 514px;
+}
+
+.big-card-title h5,
+.big-card-title {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-icon svg {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+.contact p {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--dark-grey);
+}
+
+.contact-btn {
+  margin-top: auto; /* empeny el botó al final */
+  padding: 18px 24px;
+  font-size: 15px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.contact-visual {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-badge {
+  margin-top: 10px;
+}
+
+.contact-badge img {
+  width: 172px;
+  height: 172px;
+  border-radius: 50%;
+  border: 3px solid var(--orange);
+}
+
+.photo {
+  position: relative;
+}
+
+.profile {
+  width: 320px;
+  height: 445px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.mini-toy {
+  position: absolute;
+  right: -14px;
+  bottom: -8px;
+  width: 60px;
+  height: auto;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero,
+  .my-works,
+  .footer {
+    padding: 40px 24px;
+  }
+
+  .hero .container {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 72px;
+    line-height: 72px;
+  }
+
+  .shape {
+    display: none;
+  }
+
+  .cards-wrapper {
+    flex-direction: column;
+  }
+
+  .cards-works {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .big-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-visual {
+    flex-direction: column;
+    align-items: center;
   }
 }
